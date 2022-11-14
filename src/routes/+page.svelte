@@ -1,7 +1,7 @@
 <div class="content">
 	<header>
 		<!-- <div class="navigation" /> -->
-		<div class="name">
+		<div class="block">
 			<h1>Matt Wang</h1>
 			<h3>aka mattmora</h3>
 			<h2>Game Designer & Developer</h2>
@@ -10,12 +10,12 @@
 	</header>
 	<!-- <hr> -->
 	<main>
-		<div class="block left">
-			<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+		<div class="block">
+			<p>Hi! Thanks for coming to my site.</p>
 		</div>
 		<!-- <hr> -->
-		<div class="block left">
-			<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+		<div class="block">
+			<p>It's a work in progress.</p>
 		</div>
 	</main>
 </div>
@@ -24,6 +24,7 @@
 	.content {
 		width: fit-content;
 		margin: 0;
+        padding: 1em;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -31,27 +32,6 @@
 		transform: translate(max(-50%, -50vw), max(-80%, -50vh));
 		background-color: var(--background);
 		border: 10px ridge var(--text-faded);
-	}
-
-	.name {
-		padding: 1em;
-		/* border-style: none none none solid;
-		border-color: var(--accent);
-		border-width: 0.5em; */
-	}
-
-	.block {
-		padding: 1em;
-		/* border-color: var(--accent);
-		border-width: 0.5em; */
-	}
-
-	.block.left {
-		/* border-style: none none none solid; */
-	}
-
-	.block.right {
-		/* border-style: none solid none none ; */
 	}
 
 	header {
