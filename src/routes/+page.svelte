@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 
 	const gamesInfo = [
 		{
@@ -17,6 +18,7 @@
 	];
 
 	let games = [];
+	let ready = false;
 
 	onMount(async () => {
 		gamesInfo.forEach((info) => {
@@ -26,6 +28,7 @@
 					data.url = `https://${info.user}.itch.io/${info.game}`;
 					games = [...games, data];
 					console.log(data);
+					ready = true;
 				}
 			});
 		});
@@ -36,31 +39,33 @@
 	<script type="text/javascript" src="https://static.itch.io/api.js"></script>
 </svelte:head>
 
-<div class="content">
-	<header>
-		<!-- <div class="navigation" /> -->
-		<div class="block">
-			<h1 id="name">Matt Wang</h1>
-			<h5 id="aka">aka mattmora</h5>
-			<h2 id="roles">Game Designer & Developer</h2>
-			<a href="https://mattmora.itch.io">mattmora.itch.io</a>
-		</div>
-	</header>
-	<main>
-		<div class="block">
-			<p>Hi! Thanks for coming to my site.</p>
-			<p>It's a work in progress.</p>
-		</div>
-		<div class="games">
-			{#each games as game}
-				<figure>
-					<img src={game.cover_image} alt="{game.title} cover image" />
-					<figcaption>{game.title}</figcaption>
-				</figure>
-			{/each}
-		</div>
-	</main>
-</div>
+{#if ready}
+	<div transition:fade class="content">
+		<header>
+			<!-- <div class="navigation" /> -->
+			<div class="block">
+				<h1 id="name">Matt Wang</h1>
+				<h5 id="aka">aka <a href="" class="secret">mattmora</a></h5>
+				<h2 id="roles">Game Designer & Developer</h2>
+				<a href="https://mattmora.itch.io">mattmora.itch.io</a>
+			</div>
+		</header>
+		<main>
+			<div class="block">
+				<p>Hi! Thanks for coming to my site.</p>
+				<p>It's a work in progress.</p>
+			</div>
+			<div class="games">
+				{#each games as game}
+					<figure>
+						<img src={game.cover_image} alt="{game.title} cover image" />
+						<figcaption>{game.title}</figcaption>
+					</figure>
+				{/each}
+			</div>
+		</main>
+	</div>
+{/if}
 
 <style>
 	.content {
@@ -102,8 +107,14 @@
 		border: 10px ridge var(--text-faded);
 	}
 
+	figure:hover {
+		transform: scale(1.03);
+		border-color: var(--accent);
+	}
+
 	img {
 		width: 100%;
+		/* filter: grayscale(1);/ */
 		/* max-width: 200px; */
 	}
 

@@ -27,9 +27,22 @@ a:visited {
 	color: var(--link);
 }
 
+a:link.secret,
+a:visited.secret {
+	color: var(--text-faded);
+	text-decoration: none;
+}
+
 a:hover,
 a:active {
 	color: var(--accent);
+	text-decoration: underline;
+}
+
+a:hover.secret,
+a:active.secret {
+	color: var(--accent);
+	text-decoration: underline;
 }
 
 p {
