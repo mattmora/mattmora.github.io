@@ -3,7 +3,9 @@
 	--text-primary: rgb(31, 27, 36);
 	--text-faded: #a496ad;
 	--accent: darkorange;
+	--soft-accent: rgb(206, 143, 67);
 	--link: firebrick;
+	--soft-link: rgb(179, 84, 84);
 }
 
 html {
@@ -46,5 +48,34 @@ a:active.secret {
 }
 
 p {
-	margin: 0;
+	margin: 1rem 0;
+}
+
+.panel {
+	width: 100%;
+	text-align: left;
+	font: inherit;
+	padding: 0;
+	border: 10px ridge var(--soft-link);
+}
+
+.block {
+	margin-bottom: 1em;
+	padding: 2em;
+	background-color: var(--background);
+	border: 10px ridge var(--text-faded);
+}
+
+.panel:enabled {
+	border: 10px ridge var(--soft-link);
+}
+
+.panel:enabled:hover {
+	transform: scale(1.03);
+	border-color: var(--soft-accent);
+}
+
+.panel:disabled {
+	color: var(--text-primary);
+	border-color: var(--text-faded);
 }
