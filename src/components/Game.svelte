@@ -3,7 +3,7 @@
 </script>
 
 <h2>{game.title}</h2>
-<sub><a href={game.url}>{game.url}</a></sub>
+<sub><a href={game.url}>Play on itch.io</a></sub>
 <p>
 	<img src={game.cover_image} alt="{game.title} cover image" />
 	This site is a work in progress. I'll be writing about the games I post here.
