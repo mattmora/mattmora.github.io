@@ -66,7 +66,7 @@
 	<button class="panel block" on:click={() => setFocus('about')} disabled={focus === 'about'}>
 		<h1 id="name">Matt Wang</h1>
 		<h5 id="aka">aka matt<a href="/mora" class="secret">mora</a></h5>
-		<h2 id="roles">Game Designer & Developer</h2>
+		<h2 id="roles">Game Designer, Programmer</h2>
 		<a href="https://mattmora.itch.io">mattmora.itch.io</a>
 	</button>
 </header>
@@ -142,5 +142,9 @@
 		margin-top: 0;
 		margin-bottom: 0.5em;
 		margin-left: -2px;
+	}
+
+	#focus {
+		min-height: 200px;
 	}
 </style>

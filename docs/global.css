@@ -71,7 +71,7 @@ p {
 }
 
 .panel:enabled:hover {
-	transform: scale(1.03);
+	transform: scale(1.01);
 	border-color: var(--soft-accent);
 }
 
