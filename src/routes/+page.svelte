@@ -42,7 +42,7 @@
 					data.url = `https://${info.user}.itch.io/${info.game}`;
 					games = [...games, data];
 					gamesById[data.id] = data;
-					console.log(data);
+					// console.log(data);
 					ready = true;
 				}
 			});
