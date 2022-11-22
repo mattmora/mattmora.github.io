@@ -22,8 +22,5 @@
 		overflow: auto;
 		margin-bottom: 0;
 	}
-
-	h2 {
-		margin: 0;
-	}
+    
 </style>

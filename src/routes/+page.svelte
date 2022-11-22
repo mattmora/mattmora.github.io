@@ -67,7 +67,7 @@
 		<h1 id="name">Matt Wang</h1>
 		<h5 id="aka">aka matt<a href="/mora" class="secret">mora</a></h5>
 		<h2 id="roles">Game Designer, Programmer</h2>
-		<a href="https://mattmora.itch.io">mattmora.itch.io</a>
+		<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a>
 	</button>
 </header>
 <main>

@@ -2,9 +2,9 @@
 	--background: floralwhite;
 	--text-primary: rgb(31, 27, 36);
 	--text-faded: #a496ad;
-	--accent: darkorange;
+	--accent: hsl(33, 69%, 54%);
 	--soft-accent: rgb(206, 143, 67);
-	--link: firebrick;
+	--link: hsl(0, 48%, 52%);
 	--soft-link: rgb(179, 84, 84);
 }
 
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-	height: calc(100vh - 16px);
+	height: fit-content;
 	font-size: 1.6rem;
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	color: var(--text-primary);
@@ -73,9 +73,14 @@ p {
 .panel:enabled:hover {
 	transform: scale(1.01);
 	border-color: var(--soft-accent);
+	cursor: pointer;
 }
 
 .panel:disabled {
 	color: var(--text-primary);
 	border-color: var(--text-faded);
+}
+
+h2 {
+	margin: 0;
 }
