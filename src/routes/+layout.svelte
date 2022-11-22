@@ -19,7 +19,7 @@
 		max-width: 630px;
 		margin: 0;
 		margin-top: 1em;
-		margin-bottom: calc(100px + 1em);
+		margin-bottom: 5.5em;
 		position: relative;
 		left: 50%;
 		-ms-transform: translateX(max(-50%, -50vw));
@@ -40,7 +40,7 @@
 		position: absolute;
 		width: 100%;
 		bottom: 0;
-		padding: 0.5em;
+		padding: 0.5em 0 0.5em 0;
 		height: 4em;
 		background-color: var(--background);
 		border-top: 4px ridge var(--text-faded);
