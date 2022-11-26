@@ -1,6 +1,10 @@
 <script>
 </script>
 
+<svelte:head>
+	<script type="text/javascript" src="https://static.itch.io/api.js"></script>
+</svelte:head>
+
 <div class="body">
 	<div class="content">
 		<slot />

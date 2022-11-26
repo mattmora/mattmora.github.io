@@ -58,15 +58,14 @@
 	};
 </script>
 
-<svelte:head>
-	<script type="text/javascript" src="https://static.itch.io/api.js"></script>
-</svelte:head>
+
 
 <header>
 	<button class="panel block" on:click={() => setFocus('about')} disabled={focus === 'about'}>
 		<h1 id="name">Matt Wang</h1>
 		<h5 id="aka">aka matt<a href="/mora" class="secret">mora</a></h5>
 		<h2 id="roles">Game Designer, Programmer</h2>
+		<hr>
 		<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a>
 	</button>
 </header>
