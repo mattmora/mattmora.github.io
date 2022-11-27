@@ -1,47 +1,35 @@
 <script>
 	import { onMount } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { fade, slide } from 'svelte/transition';
+	import Games from '../lib/games';
 	import About from '../components/About.svelte';
 	import AutumnDay from '../components/games/AutumnDay.svelte';
 	import StellataWaterway from '../components/games/StellataWaterway.svelte';
 	import VioletSnail from '../components/games/VioletSnail.svelte';
 
-	const gamesInfo = [
-		{
-			user: 'mattmora',
-			game: 'stellata-waterway'
-		},
-		{
-			user: 'mattmora',
-			game: 'an-autumn-day'
-		},
-		{
-			user: 'mattmora',
-			game: 'the-harrowing-life-of-the-violet-snail'
-		}
-	];
-
 	const gameComponents = {
-		[gamesInfo[0].game]: StellataWaterway,
-		[gamesInfo[1].game]: AutumnDay,
-		[gamesInfo[2].game]: VioletSnail
+		[Games.ids.STELLATA]: StellataWaterway,
+		[Games.ids.AUTUMN_DAY]: AutumnDay,
+		[Games.ids.VIOLET_SNAIL]: VioletSnail
 	};
 
-	let games = [];
-	let gamesById = {};
+	let gameData = [];
+	let gameDataById = {};
 	let ready = false;
 
 	let focusElement;
 
 	onMount(async () => {
-		gamesInfo.forEach((info) => {
+		Games.info.forEach((info) => {
 			Itch.getGameData({
-				...info,
+				user: info.user,
+				game: info.id,
 				onComplete: (data) => {
-					data.id = info.game;
-					data.url = `https://${info.user}.itch.io/${info.game}`;
-					games = [...games, data];
-					gamesById[data.id] = data;
+					data.id = info.id;
+					data.url = `https://${info.user}.itch.io/${info.id}`;
+					data.brief = info.brief;
+					gameData = [...gameData, data];
+					gameDataById[data.id] = data;
 					// console.log(data);
 					ready = true;
 				}
@@ -56,17 +44,28 @@
 		focus = id;
 		focusElement.scrollIntoView();
 	};
+
+	let gridWidth;
+	let windowWidth;
+	let gridStyle = 'grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em)';
+	$: {
+		const minColWidth = Math.min(300, windowWidth / 3);
+		const col = Math.floor(gridWidth / minColWidth);
+		const colString = `calc(${100 / col}% - ${(col - 1) / col}em)`;
+		gridStyle = `grid-template-columns: ${colString.repeat(col)}`;
+	}
 </script>
 
-
+<svelte:window bind:innerWidth={windowWidth} />
 
 <header>
 	<button class="panel block" on:click={() => setFocus('about')} disabled={focus === 'about'}>
 		<h1 id="name">Matt Wang</h1>
 		<h5 id="aka">aka matt<a href="/mora" class="secret">mora</a></h5>
 		<h2 id="roles">Game Designer, Programmer</h2>
-		<hr>
-		<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a>
+		<hr />
+		<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a
+		>
 	</button>
 </header>
 <main>
@@ -74,16 +73,19 @@
 		{#if focus === 'about'}
 			<About />
 		{:else}
-			<svelte:component this={gameComponents[focus]} game={gamesById[focus]} />
+			<svelte:component this={gameComponents[focus]} game={gameDataById[focus]} />
 		{/if}
 	</div>
-	<div class="games">
-		{#each games as game}
+	<div class="games" style={gridStyle} bind:clientWidth={gridWidth}>
+		{#each gameData as data}
 			<div in:fade>
-				<button class="panel" on:click={() => setFocus(game.id)} disabled={focus == game.id}>
+				<button class="panel" on:click={() => setFocus(data.id)} disabled={focus == data.id}>
+					<p class="overlay">
+						{data.brief}
+					</p>
 					<figure>
-						<img src={game.cover_image} alt="{game.title} cover image" />
-						<figcaption>{game.title}</figcaption>
+						<img src={data.cover_image} alt="{data.title} cover image" />
+						<figcaption>{data.title}</figcaption>
 					</figure>
 				</button>
 			</div>
@@ -94,7 +96,6 @@
 <style>
 	.games {
 		display: grid;
-		grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em);
 		column-gap: 1em;
 		row-gap: 1em;
 	}
@@ -102,15 +103,9 @@
 	figure {
 		display: flex;
 		flex-flow: column;
-		width: fit-content;
+		width: 100%;
 		height: 100%;
 		margin: 0;
-	}
-
-	img {
-		width: 100%;
-		/* filter: grayscale(1);/ */
-		/* max-width: 200px; */
 	}
 
 	figcaption {
@@ -120,6 +115,25 @@
 		padding: 0.25em;
 		background-color: var(--text-faded);
 		text-align: center;
+	}
+
+	.overlay {
+		position: absolute;
+		width: calc(100% - 2em);
+		overflow: hidden;
+		max-height: 0;
+		margin: 0;
+		padding: 0 1em;
+		top: 0;
+		left: 0;
+		background-color: var(--text-faded);
+		font-weight: bold;
+		transition: max-height 0.1s, padding 0.1s;
+	}
+
+	button:enabled:hover > .overlay {
+		max-height: 100%;
+		padding: 1em 1em;
 	}
 
 	#name {
@@ -145,5 +159,6 @@
 
 	#focus {
 		min-height: 200px;
+		overflow: auto;
 	}
 </style>

@@ -1,7 +1,7 @@
 <h2>About</h2>
 <hr>
 <p>
-	I'm a game designer and programmer currently pursuing an MFA at the NYU Game Center. In addition to game design, I have a
+	I'm a game designer and programmer currently pursuing an MFA at the NYU Game Center. In addition to game design,    I have a
 	background in music composition and audio programming, and I dabble in 2D art and animation.
 </p>
 <p>
