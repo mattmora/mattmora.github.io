@@ -6,11 +6,15 @@
 	import AutumnDay from '../components/games/AutumnDay.svelte';
 	import StellataWaterway from '../components/games/StellataWaterway.svelte';
 	import VioletSnail from '../components/games/VioletSnail.svelte';
+	import Stones from '../components/games/Stones.svelte';
+	import GoodbyeMonster from '../components/games/GoodbyeMonster.svelte';
 
 	const gameComponents = {
 		[Games.ids.STELLATA]: StellataWaterway,
 		[Games.ids.AUTUMN_DAY]: AutumnDay,
-		[Games.ids.VIOLET_SNAIL]: VioletSnail
+		[Games.ids.VIOLET_SNAIL]: VioletSnail,
+		[Games.ids.STONES]: Stones,
+		[Games.ids.GOODBYE_MONSTER]: GoodbyeMonster
 	};
 
 	let gameData = [];

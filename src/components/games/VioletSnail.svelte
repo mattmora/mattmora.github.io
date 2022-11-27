@@ -5,6 +5,7 @@
 </script>
 
 <Game {game}>
+    <h3>Concept</h3>
 	<p>
 		The initial idea for this game came from the prompt "non-human POV." Approaching this prompt, I
 		knew I wanted to make a game from the perspective of an animal with a much more limited
@@ -27,10 +28,11 @@
 			rel="noopener noreferrer">her article</a
 		> about the violet snail caught my eye. The perspective depicted in the article was exactly what
 		I was looking for, and with its descriptive writing, dramatic tone, and second person perspective,
-		it felt natural to make the game as a setting of the text.
+		it felt natural feature the text in the game.
 	</p>
+    <h3>Development</h3>
 	<p>
-		With this concept and with permission from Dr. Helm to use her text, putting together the actual
+		With the concept and permission from Dr. Helm to use her text, putting together the actual
 		game was relatively straightforward as I aimed to emphasize and add to the text through pacing,
 		visual representation, and interaction.
 	</p>
@@ -38,7 +40,7 @@
 		Concerning pacing, the source text has a very clear voice and sense of drama, so I took care to
 		split the text into sort of poetic lines and time each line accordingly. Where I saw lists or
 		parallel phrases in the text, I created parallel lines and paced them as continuous sequences.
-		Where I saw turns in the narrative, I let the critical phrases stand alone or put a pause.
+		Where I saw turns in the narrative, I let the critical phrases stand alone and/or put a pause.
 	</p>
 	<p>
 		Creating the visual representation was a less clear process. Aside from the technical
@@ -50,14 +52,14 @@
 		but not misrepresent the science.
 	</p>
 	<p>
-		For interaction, I wanted to help the player engage with the snail's perspective beyond reading
-		about it, but I avoided anything complex that might conflict with the simple existence of the
-		snail. Instead I focused on representing simple actions described in the text. I also decided
-		that none of these interactions should significantly impact what happens in the game (for
-		example, letting go of Space causing you to sink) both for simplicity's sake and because the
-		closing point of the text is that the perception of effort and struggle that we impose on the
-		snail isn't necessarily accurate, and therefore the snail may not need to consciously cling to
-		its raft at all.
+		For interaction, I wanted to help the player engage with the snail's perspective beyond just
+		reading about it. I avoided anything complex that might conflict with the simple existence of
+		the snail. Instead I focused on minimalistically representing the actions described in the text,
+		looking, clinging, and making bubbles. I also decided that none of these interactions should
+		significantly impact what happens in the game (for example, letting go of Space causing you to
+		stop clinging and sink) both for simplicity's sake and because the closing point of the text is
+		that the perception of effort and struggle that we impose on the snail isn't necessarily
+		accurate, and therefore the snail may not need to consciously cling to its raft at all.
 	</p>
 	<p class="final">
 		All said and done, I'm very happy with how the game turned out, and there are honestly no major

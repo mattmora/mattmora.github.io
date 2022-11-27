@@ -8,7 +8,7 @@
 	<p><b>{game.brief}</b></p>
 	<div>
 		<div class="float">
-			<a href={game.url} target="_blank" rel="noopener noreferrer">Play on itch.io</a>
+			<a href={game.url} target="_blank" rel="noopener noreferrer">View on itch.io</a>
 			<img src={game.cover_image} alt="{game.title} cover image" />
 		</div>
 		<slot />
