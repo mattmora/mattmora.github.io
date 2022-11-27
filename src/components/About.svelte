@@ -17,7 +17,7 @@
 	You can read my reflections on the design and development of a few of my games by selecting the
 	panels below.
 </p>
-<p>
+<p class="final">
 	You can contact me via email at <a href="mailto:mattwmora@gmail.com">mattwmora@gmail.com</a> or on
 	Discord as mattmora#7958, and you can see my resume
 	<a href="/Matt_Wang_Resume.pdf" target="_blank" rel="noopener noreferrer">here</a>.
