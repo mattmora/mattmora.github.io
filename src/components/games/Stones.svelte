@@ -16,12 +16,12 @@
 	</p>
 	<p>
 		Maybe that's self-evident (the structure described is extremely broad), but the point is that
-		the affordances of an instrument's interface define that instrument even more than the sounds it
-		produces. This is important because while game engines, DAWs, and other digital sound-making
-		tools can produce the same sounds, they have vastly different built-in affordances, which will
-		tend to be expressed in their instruments. If I want to make a certain kind of instrument, I
-		should choose a tool with the appropriate affordances. If I want to use a specific tool to make
-		an instrument, I should leverage what that tool is good at.
+		the affordances of an instrument's interface define that instrument even more than its sound.
+		This is important because while game engines, DAWs, and other digital sound-making tools can
+		produce the same sounds, they have vastly different built-in affordances, which will tend to be
+		expressed in their instruments. If I want to make a certain kind of instrument, I should choose
+		a tool with the appropriate affordances. If I want to use a specific tool to make an instrument,
+		I should leverage what that tool is good at.
 	</p>
 	<h3>Stones</h3>
 	<p>
