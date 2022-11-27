@@ -10,7 +10,7 @@
 	games, web games, and more.
 </p>
 <p>
-	Currently, I make lots of small games and prototypes, which are playable on my
+	Currently, I mostly make lots of small games and prototypes, which are playable on my
 	<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">itch.io</a> page. You
 	can read my thoughts and reflections on my design and development processes by selecting the panels
 	below.

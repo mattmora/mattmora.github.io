@@ -1,7 +1,7 @@
 import{K as At,S as ue,i as pe,s as ge,k as l,q as i,a as q,l as h,m as c,r as o,h as t,c as C,n as y,b as g,F as a,B as he,C as St,E as Ce,u as Ke,G as Tt,H as Pt,I as Dt,f as ee,t as oe,w as ce,x as ve,y as fe,z as de,L as et,M as jt,N as tt,d as Et,O as Ht,P as Wt,o as Mt,Q as xt,g as $t,v as bt,e as _t}from"../../chunks/index-9e03c306.js";function Ot(m,{delay:e=0,duration:r=400,easing:n=At}={}){const s=+getComputedStyle(m).opacity;return{delay:e,duration:r,easing:n,css:v=>`opacity: ${v*s}`}}const qe={STELLATA:"stellata-waterway",AUTUMN_DAY:"an-autumn-day",VIOLET_SNAIL:"the-harrowing-life-of-the-violet-snail",STONES:"stones",GOODBYE_MONSTER:"goodbyemonster"},ke={ids:qe,info:[{user:"mattmora",id:qe.STELLATA,brief:"A retro-styled infinite runner with high-action movement that takes inspiration from games of the 90s and early 2000s."},{user:"mattmora",id:qe.VIOLET_SNAIL,brief:"An interactive rendering of an article about a sea snail by Dr. Rebecca Helm, professor of marine biology at Georgetown University."},{user:"mattmora",id:qe.STONES,brief:"A small 3D physics-based sound toy."}]};function Nt(m){let e,r,n,s,v,u,D,k,P,j,V,A,G,K,T,$,W,x,L,B,I,S,E,M,b;return{c(){e=l("h2"),r=i("About"),n=q(),s=l("hr"),v=q(),u=l("p"),D=i(`I'm a game designer and programmer currently pursuing an MFA at the NYU Game Center. In addition\r
 	to game design, I have a background in music composition and audio programming, and I dabble in 2D\r
 	art and animation.`),k=q(),P=l("p"),j=i(`I'm interested in generative and procedural systems, emergent play, experimental games, music\r
-	games, web games, and more.`),V=q(),A=l("p"),G=i(`Currently, I make lots of small games and prototypes, which are playable on my\r
+	games, web games, and more.`),V=q(),A=l("p"),G=i(`Currently, I mostly make lots of small games and prototypes, which are playable on my\r
 	`),K=l("a"),T=i("itch.io"),$=i(` page. You\r
 	can read my thoughts and reflections on my design and development processes by selecting the panels\r
 	below.`),W=q(),x=l("p"),L=i("You can contact me via email at "),B=l("a"),I=i("mattwmora@gmail.com"),S=i(` or on\r
@@ -9,7 +9,7 @@ import{K as At,S as ue,i as pe,s as ge,k as l,q as i,a as q,l as h,m as c,r as o
 	`),E=l("a"),M=i("here"),b=i("."),this.h()},l(f){e=h(f,"H2",{});var _=c(e);r=o(_,"About"),_.forEach(t),n=C(f),s=h(f,"HR",{}),v=C(f),u=h(f,"P",{});var z=c(u);D=o(z,`I'm a game designer and programmer currently pursuing an MFA at the NYU Game Center. In addition\r
 	to game design, I have a background in music composition and audio programming, and I dabble in 2D\r
 	art and animation.`),z.forEach(t),k=C(f),P=h(f,"P",{});var J=c(P);j=o(J,`I'm interested in generative and procedural systems, emergent play, experimental games, music\r
-	games, web games, and more.`),J.forEach(t),V=C(f),A=h(f,"P",{});var Q=c(A);G=o(Q,`Currently, I make lots of small games and prototypes, which are playable on my\r
+	games, web games, and more.`),J.forEach(t),V=C(f),A=h(f,"P",{});var Q=c(A);G=o(Q,`Currently, I mostly make lots of small games and prototypes, which are playable on my\r
 	`),K=h(Q,"A",{href:!0,target:!0,rel:!0});var d=c(K);T=o(d,"itch.io"),d.forEach(t),$=o(Q,` page. You\r
 	can read my thoughts and reflections on my design and development processes by selecting the panels\r
 	below.`),Q.forEach(t),W=C(f),x=h(f,"P",{});var O=c(x);L=o(O,"You can contact me via email at "),B=h(O,"A",{href:!0});var p=c(B);I=o(p,"mattwmora@gmail.com"),p.forEach(t),S=o(O,` or on\r
