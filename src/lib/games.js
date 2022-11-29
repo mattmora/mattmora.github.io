@@ -60,6 +60,6 @@ export const ListedGames = [
 	{
 		title: '',
 		brief: '',
-		link: ''
+		url: ''
 	}
 ];

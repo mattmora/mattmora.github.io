@@ -14,7 +14,8 @@ html {
 }
 
 :focus-visible {
-	outline: 4px solid chartreuse
+	outline: 4px solid chartreuse;
+	border-radius: 2px;
 }
 
 body {
@@ -90,6 +91,11 @@ p.final {
 	transform: scale(1);
 	border-color: var(--soft-accent);
 	cursor: pointer;
+}
+
+.panel:enabled:focus {
+	transform: scale(1);
+	border-color: var(--soft-accent);
 }
 
 .panel:disabled {

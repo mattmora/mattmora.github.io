@@ -9,11 +9,24 @@
 	import Stones from '../components/games/Stones.svelte';
 	import GoodbyeMonster from '../components/games/GoodbyeMonster.svelte';
 
+	/**
+	 * TODO:
+	 * Games List
+	 * Settings
+	 * 	Flat layout
+	 * 	Animations toggle
+	 * 	Sounds toggle
+	 * Secrets
+	 * Monster cries
+	 * Little animations
+	 * Sound elements
+	 */
+
 	const gameComponents = {
 		[PostedGames.ids.STELLATA]: StellataWaterway,
 		// [PostedGames.ids.AUTUMN_DAY]: AutumnDay,
 		[PostedGames.ids.VIOLET_SNAIL]: VioletSnail,
-		[PostedGames.ids.STONES]: Stones,
+		[PostedGames.ids.STONES]: Stones
 		// [PostedGames.ids.GOODBYE_MONSTER]: GoodbyeMonster
 	};
 
@@ -141,6 +154,7 @@
 		transition: max-height 0.1s, padding 0.1s;
 	}
 
+	button:enabled:focus > .overlay,
 	button:enabled:hover > .overlay {
 		max-height: 100%;
 		padding: 1em 1em;
