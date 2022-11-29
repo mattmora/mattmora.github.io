@@ -46,11 +46,15 @@
 	let focus = 'about';
 	const setFocus = (id) => {
 		focus = id;
-		focusElement.scrollIntoView();
+		const focusBox = focusElement.parentElement.getBoundingClientRect();
+		if (focusBox.top < 0 || focusBox.top > windowHeight / 2) {
+			focusElement.parentElement.scrollIntoView();
+		}
 	};
 
 	let gridWidth;
 	let windowWidth;
+	let windowHeight;
 	let gridStyle = 'grid-template-columns: calc(50% - 0.5em) calc(50% - 0.5em)';
 	$: {
 		const minColWidth = Math.min(300, windowWidth / 3);
@@ -60,7 +64,7 @@
 	}
 </script>
 
-<svelte:window bind:innerWidth={windowWidth} />
+<svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight} />
 
 <header>
 	<button class="panel block" on:click={() => setFocus('about')} disabled={focus === 'about'}>

@@ -14,7 +14,7 @@
 	<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">itch.io</a> page.
 </p>
 <p>
-	You can read my reflections on the design and development of a few of my games by selecting the
+	You can read reflections on the design and development of a few of my games by selecting the
 	panels below.
 </p>
 <p class="final">
