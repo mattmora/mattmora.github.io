@@ -7,7 +7,7 @@ const ids = {
 	MONSTER_CRIES: 'monster-cry-generator'
 };
 
-export default {
+export const PostedGames = {
 	ids,
 	info: [
 		{
@@ -55,3 +55,11 @@ export default {
 		// }
 	]
 };
+
+export const ListedGames = [
+	{
+		title: '',
+		brief: '',
+		link: ''
+	}
+];

@@ -1,7 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade, slide } from 'svelte/transition';
-	import Games from '../lib/games';
+	import { PostedGames } from '../lib/games';
 	import About from '../components/About.svelte';
 	import AutumnDay from '../components/games/AutumnDay.svelte';
 	import StellataWaterway from '../components/games/StellataWaterway.svelte';
@@ -10,11 +10,11 @@
 	import GoodbyeMonster from '../components/games/GoodbyeMonster.svelte';
 
 	const gameComponents = {
-		[Games.ids.STELLATA]: StellataWaterway,
-		[Games.ids.AUTUMN_DAY]: AutumnDay,
-		[Games.ids.VIOLET_SNAIL]: VioletSnail,
-		[Games.ids.STONES]: Stones,
-		[Games.ids.GOODBYE_MONSTER]: GoodbyeMonster
+		[PostedGames.ids.STELLATA]: StellataWaterway,
+		// [PostedGames.ids.AUTUMN_DAY]: AutumnDay,
+		[PostedGames.ids.VIOLET_SNAIL]: VioletSnail,
+		[PostedGames.ids.STONES]: Stones,
+		// [PostedGames.ids.GOODBYE_MONSTER]: GoodbyeMonster
 	};
 
 	let gameData = [];
@@ -24,7 +24,7 @@
 	let focusElement;
 
 	onMount(async () => {
-		Games.info.forEach((info) => {
+		PostedGames.info.forEach((info) => {
 			if (info.type === 'itch') {
 				Itch.getGameData({
 					user: info.user,
@@ -71,7 +71,7 @@
 <header>
 	<button class="panel block" on:click={() => setFocus('about')} disabled={focus === 'about'}>
 		<h1 id="name">Matt Wang</h1>
-		<h5 id="aka">aka matt<a href="/mora" class="secret">mora</a></h5>
+		<h5 id="aka">aka matt<a href="/mora" class="secret">mora</a>, (he/him)</h5>
 		<h2 id="roles">Game Designer, Programmer</h2>
 		<hr />
 		<a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a
