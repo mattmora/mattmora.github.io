@@ -4,6 +4,7 @@
 
 <section>
 	<h2>{game.title}</h2>
+	<h4>{game.role + ', ' + game.date}</h4>
 	<hr />
 	<p><b>{game.brief}</b></p>
 	<div>
@@ -31,6 +32,10 @@
 	img {
 		width: calc(100% - 4px);
 		border: 2px solid var(--text-faded);
+	}
+
+	h4 {
+		color: var(--text-faded);
 	}
 
 	p {

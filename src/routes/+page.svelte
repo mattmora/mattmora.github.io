@@ -25,19 +25,21 @@
 
 	onMount(async () => {
 		Games.info.forEach((info) => {
-			Itch.getGameData({
-				user: info.user,
-				game: info.id,
-				onComplete: (data) => {
-					data.id = info.id;
-					data.url = `https://${info.user}.itch.io/${info.id}`;
-					data.brief = info.brief;
-					gameData = [...gameData, data];
-					gameDataById[data.id] = data;
-					// console.log(data);
-					ready = true;
-				}
-			});
+			if (info.type === 'itch') {
+				Itch.getGameData({
+					user: info.user,
+					game: info.id,
+					onComplete: (data) => {
+						data = Object.assign(data, info);
+						data.url = `https://${info.user}.itch.io/${info.id}`;
+						gameData = [...gameData, data];
+						gameDataById[data.id] = data;
+						// console.log(data);
+						ready = true;
+					}
+				});
+			} else if (info.type === 'built-in') {
+			}
 		});
 
 		focusElement = document.getElementById('focus');
