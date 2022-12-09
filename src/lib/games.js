@@ -4,7 +4,8 @@ const ids = {
 	VIOLET_SNAIL: 'the-harrowing-life-of-the-violet-snail',
 	STONES: 'stones',
 	GOODBYE_MONSTER: 'goodbyemonster',
-	MONSTER_CRIES: 'monster-cry-generator'
+	MONSTER_CRIES: 'monster-cry-generator',
+	GRID_GARDEN: 'grid-garden'
 };
 
 export const PostedGames = {
@@ -43,6 +44,14 @@ export const PostedGames = {
 			role: 'Solo project',
 			date: '2022',
 			brief: 'A small 3D physics-based sound toy.'
+		},
+		{
+			type: 'itch',
+			user: 'mattmora',
+			id: ids.GRID_GARDEN,
+			role: 'Solo project',
+			date: '2022',
+			brief: 'An incremental game for Excel.'
 		}
 		// {
 		//  type: 'itch',

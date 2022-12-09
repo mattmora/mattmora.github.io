@@ -8,6 +8,7 @@
 	import VioletSnail from '../components/games/VioletSnail.svelte';
 	import Stones from '../components/games/Stones.svelte';
 	import GoodbyeMonster from '../components/games/GoodbyeMonster.svelte';
+	import GridGarden from '../components/games/GridGarden.svelte';
 
 	/**
 	 * TODO:
@@ -26,7 +27,8 @@
 		[PostedGames.ids.STELLATA]: StellataWaterway,
 		// [PostedGames.ids.AUTUMN_DAY]: AutumnDay,
 		[PostedGames.ids.VIOLET_SNAIL]: VioletSnail,
-		[PostedGames.ids.STONES]: Stones
+		[PostedGames.ids.STONES]: Stones,
+		[PostedGames.ids.GRID_GARDEN]: GridGarden
 		// [PostedGames.ids.GOODBYE_MONSTER]: GoodbyeMonster
 	};
 
