@@ -40,7 +40,7 @@ import{K as $t,S as Ie,i as _e,s as ke,k as s,q as r,a as P,l,m as c,r as o,h as
 		issues with the design, such as level readability at high speed and extreme bias towards certain\r
 		scoring strategies, but there's nothing beyond fixing and things mostly function as I'd hoped.`),pe=P(),de=s("h3"),Ae=r("Playing my own games"),ge=P(),fe=s("p"),Pe=r(`Of all of my games, this is the one I probably enjoy playing the most, which I don't think means\r
 		it's better (certainly it's hard to properly enjoy narrative, puzzle, or other\r
-		one-time-experience games as their designer, but that doesn't mean their worse), but it's a\r
+		one-time-experience games as their designer, but that doesn't mean they're worse), but it's a\r
 		valuable observation to make in developing my design process. I enjoy action-oriented games and\r
 		I can apparently make one, at least to my own taste, yet I have rarely made such games. If I\r
 		want to make more action-oriented games, I need to question what about my current circumstances,\r
@@ -81,7 +81,7 @@ import{K as $t,S as Ie,i as _e,s as ke,k as s,q as r,a as P,l,m as c,r as o,h as
 		issues with the design, such as level readability at high speed and extreme bias towards certain\r
 		scoring strategies, but there's nothing beyond fixing and things mostly function as I'd hoped.`),Ke.forEach(e),pe=x(b),de=l(b,"H3",{});var ft=c(de);Ae=o(ft,"Playing my own games"),ft.forEach(e),ge=x(b),fe=l(b,"P",{});var ut=c(fe);Pe=o(ut,`Of all of my games, this is the one I probably enjoy playing the most, which I don't think means\r
 		it's better (certainly it's hard to properly enjoy narrative, puzzle, or other\r
-		one-time-experience games as their designer, but that doesn't mean their worse), but it's a\r
+		one-time-experience games as their designer, but that doesn't mean they're worse), but it's a\r
 		valuable observation to make in developing my design process. I enjoy action-oriented games and\r
 		I can apparently make one, at least to my own taste, yet I have rarely made such games. If I\r
 		want to make more action-oriented games, I need to question what about my current circumstances,\r

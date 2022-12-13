@@ -55,7 +55,7 @@
 	<p>
 		Of all of my games, this is the one I probably enjoy playing the most, which I don't think means
 		it's better (certainly it's hard to properly enjoy narrative, puzzle, or other
-		one-time-experience games as their designer, but that doesn't mean their worse), but it's a
+		one-time-experience games as their designer, but that doesn't mean they're worse), but it's a
 		valuable observation to make in developing my design process. I enjoy action-oriented games and
 		I can apparently make one, at least to my own taste, yet I have rarely made such games. If I
 		want to make more action-oriented games, I need to question what about my current circumstances,
