@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { GameIds, Games, InfoType } from '../../lib/games';
+import { GameIds, Games, InfoType } from '../../../lib/games';
 
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {

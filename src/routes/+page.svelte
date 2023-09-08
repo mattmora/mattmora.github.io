@@ -69,8 +69,8 @@
             <Game game={data} brief />
           </div>
           {#if data.cover_image}
-            <div class="panel" style="width: 27%">
-              <a href="/{data.id}">
+            <div class="panel" style="width: 25%">
+              <a href="/articles/{data.id}">
                 <figure>
                   <img src={data.cover_image} alt="{data.title} cover image" />
                 </figure></a

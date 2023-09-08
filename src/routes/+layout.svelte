@@ -23,7 +23,7 @@
 <style>
   .content {
     width: fit-content;
-    max-width: min(640px, 96%);
+    max-width: min(760px, 96%);
     margin: 0;
     margin-top: 1em;
     margin-bottom: 5.5em;

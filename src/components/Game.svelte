@@ -4,10 +4,12 @@
 </script>
 
 <section>
-  <h3>{game.title ?? '. . .'}</h3>
-  <h4>{game.role + ' / ' + game.date}</h4>
+  <h3>{game.title ?? '. . .'} <span class="info"> / {game.role + ' / ' + game.date}</span></h3>
+
   {#if !brief}
-    <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer">Play</a>
+    <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer"
+      >Play at {game.link ?? game.url}</a
+    >
   {/if}
   <hr />
   {#if brief}
@@ -15,10 +17,10 @@
     <!-- use custom link if defined, otherwise use itch url -->
     <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer">Play</a>
     {#if game.article}
-      / <a href="/{game.id}">Read</a>
+      / <a href="/articles/{game.id}">Read</a>
     {/if}
     {#if game.video}
-      / <a href="/{game.id}">Watch</a>
+      / <a href="/articles/{game.id}">Watch</a>
     {/if}
   {:else}
     <div>
@@ -39,6 +41,10 @@
     margin-left: 1em;
   }
 
+  h3 {
+    margin-bottom: 0.5em;
+  }
+
   a {
     margin-bottom: 0.5em;
   }
@@ -48,11 +54,13 @@
     border: 2px inset var(--text-faded);
   }
 
-  h4 {
+  .info {
+    font-size: medium;
     color: var(--text-faded);
   }
 
   p {
     overflow: auto;
+    margin-bottom: 0;
   }
 </style>

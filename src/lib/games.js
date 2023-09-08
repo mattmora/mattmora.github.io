@@ -50,7 +50,8 @@ export const Games = {
     id: GameIds.VIOLET_SNAIL,
     role: 'Solo project',
     date: '2022',
-    brief: 'An interactive rendering of an article about a sea snail by Dr. Rebecca Helm.',
+    brief:
+      'An interactive rendering of an article about a sea snail by Dr. Rebecca Helm, professor of marine biology at Georgetown University.',
     article: true,
     video: false,
     component: VioletSnail

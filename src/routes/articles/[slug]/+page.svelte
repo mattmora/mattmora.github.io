@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { Games, InfoType } from '../../lib/games';
+  import { Games, InfoType } from '../../../lib/games';
 
   /** @type {import('./$types').PageData} */
   export let data;
