@@ -39,21 +39,28 @@ Itch.getGameData = function (opts) {
   return xhr.send();
 };
 
-fs.rmSync('./static/itch-data.json');
+const path = './src/data/itch-data.json';
+
+const itchData = {};
+
 Object.values(ItchInfo).forEach((info) => {
-  // get itch data
   Itch.getGameData({
     user: info.user,
     game: info.id,
     onComplete: (data) => {
-      const json = JSON.stringify(data);
-      fs.appendFile('./static/itch-data.json', json, 'utf8', function (err) {
-        if (err) {
-          console.log(`An error occured while writing json.`);
-          return console.log(err);
-        }
-        console.log(`${info.id} has been saved.`);
-      });
+      itchData[info.id] = data;
+      itchData[info.id].url = `https://${info.user}.itch.io/${info.id}`;
+      console.log(`${info.id} received.`);
+      if (Object.keys(itchData).length == Object.keys(ItchInfo).length) {
+        console.log('Writing itch-data.json.');
+        const json = JSON.stringify(itchData);
+        fs.writeFile(path, json, 'utf8', function (err) {
+          if (err) {
+            console.log(`An error occured while writing json.`);
+            return console.log(err);
+          }
+        });
+      }
     }
   });
 });

@@ -2,15 +2,7 @@
   import { Games } from '../lib/localInfo';
   import Game from '../components/Game.svelte';
   import { GameIds } from '../lib/gameIds';
-
-  /** @type {import('./$types').PageServerData} */
-  export let itchData;
-
-  let gameData = {};
-
-  Object.values(GameIds).forEach((id) => {
-    gameData[id] = Games[id];
-  });
+  import itchData from '../data/itch-data.json';
 
   let windowWidth;
   let windowHeight;
@@ -45,7 +37,7 @@
   <div class="games panel block">
     <h2>Projects</h2>
     {#each Object.values(GameIds) as id}
-      {@const data = { ...(itchData?.[id] ?? {}), ...gameData[id] }}
+      {@const data = { ...(itchData?.[id] ?? {}), ...Games[id] }}
       {#if data}
         <article class="row">
           {#if data.title}

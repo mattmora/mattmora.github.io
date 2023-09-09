@@ -17,6 +17,7 @@ export const Games = {
     playable: true,
     article: false,
     video: false,
+    link: 'https://matt.mora.games/horizon',
     component: StellataWaterway
   },
   [GameIds.SLIME_FOREST]: {
