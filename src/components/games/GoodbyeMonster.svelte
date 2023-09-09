@@ -10,6 +10,12 @@
     ambiguous world. In many ways, it's a response to the instrumental role of creatures in creature
     collector games.
   </p>
+  <p>
+    Made alongside <a href="https://beckettrowan.itch.io/" target="_blank" rel="noopener noreferrer"
+      >Beckett</a
+    >, <a href="https://lorgoncewas.itch.io/" target="_blank" rel="noopener noreferrer">Lorg</a>,
+    and <a href="https://rookliu.itch.io/" target="_blank" rel="noopener noreferrer">Rook</a>.
+  </p>
   <iframe
     src="https://www.youtube.com/embed/1tXSoDF18CA?si=Dpym31bXyPLfcL12"
     title="goodbye.monster trailer"

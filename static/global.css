@@ -1,7 +1,7 @@
 :root {
   --background: floralwhite;
-  /* --backdrop: rgb(237 220 208); */
-  --backdrop: floralwhite;
+  --backdrop: rgb(237 220 208);
+  /* --backdrop: floralwhite; */
   --text-primary: rgb(31, 27, 36);
   --text-faded: rgb(164, 150, 173);
   --accent: hsl(33, 69%, 54%);
@@ -20,12 +20,13 @@ html {
   border-radius: 2px;
 }
 
-body {
+.body {
   height: fit-content;
   font-size: 1.6rem;
   font-family: 'Atkinson Hyperlegible', sans-serif;
   color: var(--text-primary);
-  background: var(--backdrop) url('./path.png');
+  background-image: url('./path.png'),
+    linear-gradient(-20deg, var(--backdrop), var(--background), var(--backdrop));
 }
 
 div {
@@ -81,7 +82,7 @@ p.final {
 
 .block {
   margin-bottom: 1em;
-  padding: 2em;
+  padding: 1em;
   background-color: var(--background);
   border: 10px ridge var(--text-faded);
 }

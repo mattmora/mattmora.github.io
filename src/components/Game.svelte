@@ -5,24 +5,29 @@
 
 <section>
   <h3>{game.title ?? '. . .'} <span class="info"> / {game.role + ' / ' + game.date}</span></h3>
-
-  {#if !brief}
+  {#if !brief && game.playable}
     <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer"
       >Play at {game.link ?? game.url}</a
     >
+    <hr />
   {/if}
-  <hr />
   {#if brief}
     <p>{game.brief}</p>
-    <!-- use custom link if defined, otherwise use itch url -->
-    <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer">Play</a>
+    {#if game.playable}
+      <!-- use custom link if defined, otherwise use itch url -->
+      <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer">Play</a>
+    {/if}
     {#if game.article}
-      / <a href="/articles/{game.id}">Read</a>
+      {#if game.playable}
+        /
+      {/if}<a href="/articles/{game.id}">Read</a>
     {/if}
     {#if game.video}
-      / <a href="/articles/{game.id}">Watch</a>
+      {#if game.playable || game.article}
+        /
+      {/if}<a href="/articles/{game.id}">Watch</a>
     {/if}
-  {:else}
+  {:else if game.image}
     <div>
       <div class="float">
         <img src={game.cover_image} alt="{game.title} cover image" />

@@ -1,33 +1,15 @@
 <script>
-  import { onMount } from 'svelte';
-  import { GameIds, Games, InfoType } from '../lib/games';
+  import { Games } from '../lib/localInfo';
   import Game from '../components/Game.svelte';
+  import { GameIds } from '../lib/gameIds';
 
-  let gameDataById = {};
-  let ready = false;
+  /** @type {import('./$types').PageServerData} */
+  export let itchData;
 
-  Object.values(Games).forEach((info) => {
-    // populate with local data before mount
-    gameDataById[info.id] = info;
-    gameDataById[info.id].url = `https://${info.user}.itch.io/${info.id}`;
-  });
+  let gameData = {};
 
-  onMount(async () => {
-    Object.values(Games).forEach((info) => {
-      if (info.type === InfoType.ITCH) {
-        // get itch data
-        Itch.getGameData({
-          user: info.user,
-          game: info.id,
-          onComplete: (data) => {
-            gameDataById[info.id] = Object.assign(data, gameDataById[info.id]);
-            // console.log(data);
-            ready = true;
-          }
-        });
-      } else if (info.type === InfoType.LOCAL) {
-      }
-    });
+  Object.values(GameIds).forEach((id) => {
+    gameData[id] = Games[id];
   });
 
   let windowWidth;
@@ -61,21 +43,24 @@
 </header>
 <main>
   <div class="games panel block">
+    <h2>Projects</h2>
     {#each Object.values(GameIds) as id}
-      {@const data = gameDataById[id]}
+      {@const data = { ...(itchData?.[id] ?? {}), ...gameData[id] }}
       {#if data}
         <article class="row">
-          <div class="brief" style="width: 100%;">
-            <Game game={data} brief />
-          </div>
-          {#if data.cover_image}
-            <div class="panel" style="width: 25%">
-              <a href="/articles/{data.id}">
-                <figure>
-                  <img src={data.cover_image} alt="{data.title} cover image" />
-                </figure></a
-              >
+          {#if data.title}
+            <div class="brief" style="width: 100%;">
+              <Game game={data} brief />
             </div>
+            {#if data.image && data.cover_image}
+              <div class="panel" style="width: 25%">
+                <a href="/articles/{id}">
+                  <figure>
+                    <img src={data.cover_image} alt="{data.title} cover image" />
+                  </figure></a
+                >
+              </div>
+            {/if}
           {/if}
         </article>
       {/if}
@@ -100,7 +85,7 @@
   }
 
   .brief {
-    padding: 1em;
+    padding: 1rem;
   }
 
   figure {
