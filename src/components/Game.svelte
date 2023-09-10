@@ -28,18 +28,46 @@
       {/if}<a href="/articles/{game.id}">Watch</a>
     {/if}
   {:else}
-    <div>
-      {#if game.image}
-        <div class="float">
-          <img src={game.cover_image} alt="{game.title} cover image" />
+    {#if game.video && game.embed}
+      {#if game.article}
+        <div class="float" style="width: 50%;">
+          <iframe
+            src={game.embed}
+            title="Video player"
+            frameborder="2"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          />
         </div>
+      {:else}
+        <iframe
+          src={game.embed}
+          title="Video player"
+          frameborder="2"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        />
       {/if}
-      <slot />
-    </div>
+    {:else if game.image}
+      <div class="float">
+        <img src={game.cover_image} alt="{game.title} cover image" />
+      </div>
+    {/if}
+    <slot />
   {/if}
 </section>
 
 <style>
+  iframe {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px inset var(--text-faded);
+    width: 100%;
+    margin-top: 0.5em;
+    aspect-ratio: 16 / 9;
+  }
+
   .float {
     float: right;
     display: flex;

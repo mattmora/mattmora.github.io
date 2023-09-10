@@ -13,19 +13,20 @@
     <link rel="icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-abdcd3eb.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/games-6fbb810b.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-5a411a5f.js">
+		<link href="../_app/immutable/assets/_layout-d3747d6a.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/localInfo-374364a7.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-51898f52.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index-2324210b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-5d30c876.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-966263e2.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control-03134885.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-303cf681.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-cd7bec68.js">
 		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/articles/_slug_/_page.svelte-4e4709ea.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/games-9ed33201.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/articles/_slug_/_page.js-c6abe2ce.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-a6bf2276.js"><!-- HEAD_svelte-qrna4k_START --><script type="text/javascript" src="https://static.itch.io/api.js"></script><script src="https://player.vimeo.com/api/player.js"></script><!-- HEAD_svelte-qrna4k_END -->
+		<link rel="modulepreload" href="../_app/immutable/components/pages/articles/_slug_/_page.svelte-efc968fe.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/itch-data-1dfdffcb.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/articles/_slug_/_page.js-860d38b2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-e5910f79.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/localInfo-1ed016c0.js"><!-- HEAD_svelte-qrna4k_START --><script type="text/javascript" src="https://static.itch.io/api.js"></script><script src="https://player.vimeo.com/api/player.js"></script><!-- HEAD_svelte-qrna4k_END -->
   </head>
   <body>
     <div style="display: contents">
@@ -33,14 +34,85 @@
 
 
 
-<div class="body svelte-1idh4zg"><div class="content svelte-1idh4zg"></div>
-  <footer class="svelte-1idh4zg"><p class="svelte-1idh4zg">© 2023 Matt Wang</p>
-    <p class="svelte-1idh4zg"><a href="https://github.com/mattmora/mattmora.github.io">https://github.com/mattmora/mattmora.github.io</a></p></footer>
+<div class="body svelte-vqbcbl"><div class="content svelte-vqbcbl"><div class="panel block"><a href="/">Return</a>
+  <hr>
+  <section><h3 class="svelte-1d5lome">Grid Garden <span class="info svelte-1d5lome">/ Solo project / 2022</span></h3>
+  <a href="https://mattmora.itch.io/grid-garden" target="_blank" rel="noopener noreferrer" class="svelte-1d5lome">https://mattmora.itch.io/grid-garden</a>
+    <hr>
+  <div class="float svelte-1d5lome" style="width: 50%;"><iframe src="https://www.youtube.com/embed/ts6D_aYnd8g?si=90wEl3cEKesmBPXt" title="Video player" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="svelte-1d5lome"></iframe></div>
+    <p><i>Grid Garden</i> is my attempt at an incremental game for the spreadsheet. My goal was to
+    leverage the ways we normally interact with spreadsheets - typing, copying, pasting, selecting,
+    and deleting text in cells - and the data organization affordances of the grid. I was also
+    inspired by
+    <a href="https://everest-pipkin.com/barnacle-goose/" target="_blank" rel="noopener noreferrer">Everest Pipkin&#39;s <i>Barnacle Goose</i></a> and its item combinations and non-clicker incremental systems, which both felt suited for adaptation
+    to the spreadsheet.
+  </p>
+  <h3>Process</h3>
+  <p>I started with the ideas of creating items by typing, combining items, and creating an abstract
+    garden on the grid of the spreadsheet. From there I decided on treating the spreadsheet as a
+    space in which items can be combined and compartmentalizing item creation to an item that has a
+    sort of input field. That then presented the question of what should happen when the player
+    tries to create an invalid item or makes an error. While it may have worked for nothing to
+    happen, it seemed more interesting to convert the invalid text by length into an item, compost,
+    which could serve as the substrate for the garden. Around the same time, I thought of digging up
+    buried items as another interaction, as only typing into a single cell to generate items felt
+    too restrictive.
+  </p>
+  <p>I then broke down the information that might need to exist for a cell in the garden and for an
+    item. A single cell might need to hold item text placed by the player, a flag for compost, and
+    text or an ID for a buried item. Items might need counts, descriptions, recipes, and visual
+    information.
+  </p>
+  <p>As I figured out what information was needed, I also started to lay out the structure of the
+    workbook. I realized that for the amount of information a given cell needed it would be easiest
+    to use multiple sheets in parallel, such that A1 of one sheet corresponds to A1 of the others. I
+    created the main garden sheet that uses cell fills and conditional formatting for display and
+    other only holds item text, a surface sheet that holds compost information, and an underground
+    sheet that holds buried items. Structuring the information for items was simpler as that could
+    exist in basic tables, organized in different sheets, and be easily accessed with Match and
+    VLookup functions.
+  </p>
+  <p>From there, implementation was relatively straightforward, learning VBA aside. And the project
+    does use a significant amount of VBA, but its purpose is not to fight the inherent affordances
+    of the spreadsheet. Rather the code mainly serves to apply complex comparisons and operations
+    across worksheets and react to user input in a way that basic Excel functions cannot.
+  </p>
+  <h3>VBA and Excel</h3>
+  <p>Working in VBA was a challenge. I don&#39;t like the syntax and the errors are not especially clear
+    or helpful. Working in Excel generally, however, was convenient in that it&#39;s very natural to
+    edit and access tabular information, such as the inventory or item recipes. It calls for a
+    different, more data driven kind of design and thinking than I&#39;m used to and which I hope to
+    transfer to games outside of spreadsheets.
+  </p>
+  <h3>Shovels</h3>
+  <p>A small feature I really like and would like to highlight is the dig-area scaling with shovels.
+    Aside from the comedic gaminess of more shovels allowing you to dig more efficiently, I like the
+    scaling system I ended up with where each shovel allows you to dig in an area one row or column
+    larger. I first tried having each shovel increase the area by one cell, but the growth of that
+    felt much too slow and didn&#39;t adequately incentivize making shovels. Squaring the number of
+    shovels is another obvious option, and one that might even work well, but I suspected it would
+    scale too quickly. The row and column system is a middle ground. The current system may also be
+    somewhat unintuitive, but in a game that isn&#39;t too complicated overall, I think the bit of extra
+    complexity in one of the primary interactions (digging) is a benefit.
+  </p>
+  <h3>Improvement</h3>
+  <p class="final">If I had more time to work on this or were to continue work on it, I&#39;d look at tuning the
+    incremental systems, which I didn&#39;t have much time to do, improving logging, easing recipe
+    discovery, and adding more items, especially items with special behaviors like the materializer
+    and automaton. One of the more exciting things to me currently is the little machine that can be
+    created by placing an automaton below a materializer, and I would like to have more of those be
+    possible. And of course, there are probably bugs that I haven&#39;t found and fixed.
+  </p>
+</section>
+  <hr>
+  <a href="/">Return</a></div></div>
+  <footer class="svelte-vqbcbl"><p class="svelte-vqbcbl">© 2023 Matt Wang</p>
+    <p class="svelte-vqbcbl"><a href="https://github.com/mattmora/mattmora.github.io">https://github.com/mattmora/mattmora.github.io</a></p></footer>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1uamfen">
-			import { start } from "../_app/immutable/start-5a411a5f.js";
+		<script type="module" data-sveltekit-hydrate="16rdiak">
+			import { start } from "../_app/immutable/start-51898f52.js";
 
 			start({
 				env: {},
@@ -54,7 +126,7 @@
 					form: null
 				},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1uamfen"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="16rdiak"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>

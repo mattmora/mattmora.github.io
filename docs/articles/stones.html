@@ -13,19 +13,20 @@
     <link rel="icon" href="../favicon.png" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-abdcd3eb.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/games-6fbb810b.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-5a411a5f.js">
+		<link href="../_app/immutable/assets/_layout-d3747d6a.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/localInfo-374364a7.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/start-51898f52.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index-2324210b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-5d30c876.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-966263e2.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control-03134885.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-303cf681.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-cd7bec68.js">
 		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.js-7b9cbfbc.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-8d2a742b.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/articles/_slug_/_page.svelte-4e4709ea.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/games-9ed33201.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/articles/_slug_/_page.js-c6abe2ce.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-a6bf2276.js"><!-- HEAD_svelte-qrna4k_START --><script type="text/javascript" src="https://static.itch.io/api.js"></script><script src="https://player.vimeo.com/api/player.js"></script><!-- HEAD_svelte-qrna4k_END -->
+		<link rel="modulepreload" href="../_app/immutable/components/pages/articles/_slug_/_page.svelte-efc968fe.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/itch-data-1dfdffcb.js">
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/articles/_slug_/_page.js-860d38b2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-e5910f79.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/localInfo-1ed016c0.js"><!-- HEAD_svelte-qrna4k_START --><script type="text/javascript" src="https://static.itch.io/api.js"></script><script src="https://player.vimeo.com/api/player.js"></script><!-- HEAD_svelte-qrna4k_END -->
   </head>
   <body>
     <div style="display: contents">
@@ -33,14 +34,54 @@
 
 
 
-<div class="body svelte-1idh4zg"><div class="content svelte-1idh4zg"></div>
-  <footer class="svelte-1idh4zg"><p class="svelte-1idh4zg">© 2023 Matt Wang</p>
-    <p class="svelte-1idh4zg"><a href="https://github.com/mattmora/mattmora.github.io">https://github.com/mattmora/mattmora.github.io</a></p></footer>
+<div class="body svelte-vqbcbl"><div class="content svelte-vqbcbl"><div class="panel block"><a href="/">Return</a>
+  <hr>
+  <section><h3 class="svelte-1d5lome">Stones <span class="info svelte-1d5lome">/ Solo project / 2022</span></h3>
+  <a href="https://mattmora.itch.io/stones" target="_blank" rel="noopener noreferrer" class="svelte-1d5lome">https://mattmora.itch.io/stones</a>
+    <hr>
+  <div class="float svelte-1d5lome" style="width: 50%;"><iframe src="https://www.youtube.com/embed/DAWz8SXKhSo?si=UXBF1b1p2cu1LPpk" title="Video player" frameborder="2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="svelte-1d5lome"></iframe></div>
+    <h3>Sound toys and instruments</h3>
+  <p>I like to think about sound toys as musical instruments. I don&#39;t mean that they should be suited
+    for performance or be capable of producing conventional music, but that they are interfaces that
+    map to sound, and the affordances of their interfaces define them. There isn&#39;t a fundamental
+    difference between the input-mapping-to-sound structure of an instrument in a DAW and <i>Electroplankton</i>; they just differ in their affordances.
+  </p>
+  <p>Maybe that&#39;s self-evident (the structure described is extremely broad), but the point is that
+    the affordances of an instrument&#39;s interface define that instrument even more than its sound.
+    This is important because while game engines, DAWs, and other digital sound-making tools can
+    produce the same sounds, they have vastly different built-in affordances, which will tend to be
+    expressed in their instruments. If I want to make a certain kind of instrument, I should choose
+    a tool with the appropriate affordances. If I want to use a specific tool to make an instrument,
+    I should leverage what that tool is good at.
+  </p>
+  <h3>Stones</h3>
+  <p><i>Stones</i> is a small exploration of one special affordance of Unity and many game engines: physics
+    simulation. It uses a 3D point-and-click interface to move around blocks whose linear and angular
+    velocity map to sound.
+  </p>
+  <p>The sound generation is actually extremely simple. Each block plays a looping drone sound with a
+    different sound for each texture, then linear velocity controls its volume and angular velocity
+    controls its pitch. Even with this simple mapping, the physics can produce some very dynamic
+    sounds, such as impact transients when the velocities abruptly change on collision. The
+    different weights of each block texture also create different volume and pitch curves when
+    dragging them around.
+  </p>
+  <h3>Problems</h3>
+  <p class="final"><i>Stones</i> definitely has some issues. Some of the physics are too sensitive, there&#39;s an odd disconnect
+    between the player cursor and moving around blocks, the isometric view and lack of lighting hurts
+    depth perception, and I don&#39;t think the pitch quantization works. Nevertheless, I think it&#39;s an interesting
+    prototype and an idea I might like to do more with at some point.
+  </p>
+</section>
+  <hr>
+  <a href="/">Return</a></div></div>
+  <footer class="svelte-vqbcbl"><p class="svelte-vqbcbl">© 2023 Matt Wang</p>
+    <p class="svelte-vqbcbl"><a href="https://github.com/mattmora/mattmora.github.io">https://github.com/mattmora/mattmora.github.io</a></p></footer>
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="1uamfen">
-			import { start } from "../_app/immutable/start-5a411a5f.js";
+		<script type="module" data-sveltekit-hydrate="11v64s1">
+			import { start } from "../_app/immutable/start-51898f52.js";
 
 			start({
 				env: {},
@@ -54,7 +95,7 @@
 					form: null
 				},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="1uamfen"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="11v64s1"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>

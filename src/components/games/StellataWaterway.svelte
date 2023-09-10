@@ -6,7 +6,7 @@
 
 <Game {game}>
   <p>
-    <i>Stellata Waterway</i> started as a recreation of the systems and mechanics of one of my
+    <i>Stellata Waterway</i> started as a recreation of certain systems and mechanics from one of my
     favorite games as kid (and still), <i>Klonoa 2: Lunatea's Veil</i>. Specifically, my design is
     directly based on
     <a href="https://youtu.be/6JQQhQK05SY?t=205" target="_blank" rel="noopener noreferrer"

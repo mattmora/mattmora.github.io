@@ -17,16 +17,9 @@
     and <a href="https://rookliu.itch.io/" target="_blank" rel="noopener noreferrer">Rook</a>.
   </p>
   <iframe
-    src="https://www.youtube.com/embed/1tXSoDF18CA?si=Dpym31bXyPLfcL12"
-    title="goodbye.monster trailer"
-    frameborder="1"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    allowfullscreen
-  />
-  <iframe
     title="goodbye.monster gameplay video"
     src="https://player.vimeo.com/video/851962984?h=d7ced28ac1&byline=0&portrait=0"
-    frameborder="1"
+    frameborder="2"
     allow="autoplay; fullscreen; picture-in-picture"
     allowfullscreen
   />

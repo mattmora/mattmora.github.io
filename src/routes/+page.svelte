@@ -1,7 +1,7 @@
 <script>
   import { Games } from '../lib/localInfo';
   import Game from '../components/Game.svelte';
-  import { GameIds } from '../lib/gameIds';
+  import { PostedIds } from '../lib/gameIds';
   import itchData from '../data/itch-data.json';
 
   let windowWidth;
@@ -17,13 +17,13 @@
     <!-- <a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a> -->
     <hr />
     <p>
-      I'm a game designer with a background in music composition and audio programming. I'm
-      especially interested in systems design, web games, experimental games, music games, and more.
+      I'm a game designer with a background in audio programming and music composition. I'm
+      interested in systems design, web games, experimental games, music games, and more.
     </p>
     <p>
       You can play most of my games on my
       <a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">itch.io</a> page,
-      and you can read about some of them at the links below.
+      and you can read about or see gameplay of some of them at the links below.
     </p>
     <p class="final">
       You can contact me at <a href="mailto:mattwmora@gmail.com">mattwmora@gmail.com</a>
@@ -36,7 +36,7 @@
 <main>
   <div class="games panel block">
     <h2>Projects</h2>
-    {#each Object.values(GameIds) as id}
+    {#each PostedIds as id}
       {@const data = { ...(itchData?.[id] ?? {}), ...Games[id] }}
       {#if data}
         <article class="row">
@@ -46,11 +46,17 @@
             </div>
             {#if data.image && data.cover_image}
               <div class="panel" style="width: 25%">
-                <a href="/articles/{id}">
+                {#if data.article || data.video}
+                  <a href="/articles/{id}">
+                    <figure>
+                      <img src={data.cover_image} alt="{data.title} cover image" />
+                    </figure></a
+                  >
+                {:else}
                   <figure>
                     <img src={data.cover_image} alt="{data.title} cover image" />
-                  </figure></a
-                >
+                  </figure>
+                {/if}
               </div>
             {/if}
           {/if}

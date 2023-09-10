@@ -26,7 +26,7 @@ html {
   font-family: 'Atkinson Hyperlegible', sans-serif;
   color: var(--text-primary);
   background-image: url('./path.png'),
-    linear-gradient(-20deg, var(--backdrop), var(--background), var(--backdrop));
+    linear-gradient(-15deg, var(--backdrop), var(--background), var(--background), var(--backdrop));
 }
 
 div {
@@ -82,7 +82,7 @@ p.final {
 
 .block {
   margin-bottom: 1em;
-  padding: 1em;
+  padding: 1.5em;
   background-color: var(--background);
   border: 10px ridge var(--text-faded);
 }

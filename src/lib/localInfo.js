@@ -4,6 +4,14 @@ import VioletSnail from '../components/games/VioletSnail.svelte';
 import Stones from '../components/games/Stones.svelte';
 import GoodbyeMonster from '../components/games/GoodbyeMonster.svelte';
 import GridGarden from '../components/games/GridGarden.svelte';
+import Horizon from '../components/games/Horizon.svelte';
+import CloverPatch from '../components/games/CloverPatch.svelte';
+import Gerridae from '../components/games/Gerridae.svelte';
+import Interference from '../components/games/Interference.svelte';
+import Klaviering from '../components/games/Klaviering.svelte';
+import SlimeForest from '../components/games/SlimeForest.svelte';
+import Ursonate from '../components/games/Ursonate.svelte';
+import Valley from '../components/games/Valley.svelte';
 import { GameIds } from './gameIds';
 
 export const Games = {
@@ -13,67 +21,67 @@ export const Games = {
     date: '2023',
     brief:
       'A text-based incremental game about the physics of long-distance, high-speed space travel.',
-    image: false,
+    image: true,
     playable: true,
-    article: false,
+    article: true,
     video: false,
     link: 'https://matt.mora.games/horizon',
-    component: StellataWaterway
+    component: Horizon
   },
   [GameIds.SLIME_FOREST]: {
     id: GameIds.SLIME_FOREST,
-    role: 'Engineer',
+    role: 'Engineer, Audio',
     date: '2023',
-    brief: 'A sound toy driven by Unity ML-Agents.',
+    brief: 'An unfair JRPG-inspired battle gauntlet.',
     image: true,
     playable: true,
-    article: false,
-    video: false,
-    component: StellataWaterway
+    article: true,
+    video: true,
+    embed: 'https://www.youtube.com/embed/kRUBTgfcdYQ?si=reRirXIIZ76twmzl',
+    component: SlimeForest
   },
   [GameIds.CLOVER_PATCH]: {
     id: GameIds.CLOVER_PATCH,
     role: 'Solo project',
     date: '2022',
-    brief: 'A sound toy driven by Unity ML-Agents.',
+    brief: 'A clover picking simulator.',
     image: true,
     playable: true,
     article: false,
     video: false,
-    component: StellataWaterway
+    component: CloverPatch
   },
   [GameIds.VALLEY]: {
     id: GameIds.VALLEY,
     role: 'Solo project',
     date: '2022',
-    brief: 'A sound toy driven by Unity ML-Agents.',
+    brief: 'A small 2D platformer collect-a-thon.',
     image: true,
     playable: true,
     article: false,
-    video: false,
-    component: StellataWaterway
+    video: true,
+    embed: 'https://www.youtube.com/embed/WXUh96q16KA?si=kBnH2qnr6ogtMMdo',
+    component: Valley
   },
   [GameIds.CHESS]: {
     id: GameIds.CHESS,
     role: 'Solo project',
     date: '2022',
-    brief: 'A sound toy driven by Unity ML-Agents.',
-    image: false,
+    brief: 'A tiny narrative game that plays with the rigidity of digital chess.',
+    image: true,
     playable: true,
     article: false,
-    video: false,
-    component: StellataWaterway
+    video: false
   },
   [GameIds.SCAFFOLD]: {
     id: GameIds.SCAFFOLD,
     role: 'Solo project',
     date: '2022',
-    brief: 'A sound toy driven by Unity ML-Agents.',
+    brief: 'An abstract structure-matching puzzle game.',
     image: true,
     playable: true,
     article: false,
-    video: false,
-    component: StellataWaterway
+    video: false
   },
   //============================
   //============================
@@ -85,21 +93,22 @@ export const Games = {
       'A game-form networked multiplayer musical system for performance. Originally made for the Princeton Laptop Orchestra.',
     image: false,
     playable: false,
-    article: false,
+    article: true,
     video: true,
-    component: StellataWaterway,
+    component: Interference,
     title: 'Interference'
   },
   [GameIds.URSONATE]: {
     id: GameIds.URSONATE,
     role: 'Solo project',
     date: '2021',
-    brief: 'A rhythm/typing game using Kurt Schwitters\' "Ursonate."',
-    image: false,
+    brief: 'A rhythm/typing game for Kurt Schwitters\' "Ursonate."',
+    image: true,
     playable: true,
     article: false,
-    video: false,
-    component: StellataWaterway
+    video: true,
+    embed: 'https://www.youtube.com/embed/Q4yaFviDVGk?si=A3sumWBrDk8mfnqq',
+    component: Ursonate
   },
   [GameIds.GOLF]: {
     id: GameIds.GOLF,
@@ -109,8 +118,7 @@ export const Games = {
     image: true,
     playable: true,
     article: false,
-    video: false,
-    component: StellataWaterway
+    video: false
   },
   [GameIds.KLAVIERING]: {
     id: GameIds.KLAVIERING,
@@ -120,19 +128,21 @@ export const Games = {
     image: true,
     playable: true,
     article: false,
-    video: false,
-    component: StellataWaterway
+    video: true,
+    embed: 'https://www.youtube.com/embed/fFsX6hjPEGI?si=g1OSvV3pn-JqXILl',
+    component: Klaviering
   },
   [GameIds.GERRIDAE]: {
     id: GameIds.GERRIDAE,
     role: 'Solo project',
     date: '2022',
     brief: 'A sound toy driven by Unity ML-Agents.',
-    image: false,
+    image: true,
     playable: true,
-    article: false,
-    video: false,
-    component: StellataWaterway
+    article: true,
+    video: true,
+    embed: 'https://www.youtube.com/embed/gvH6NGf_KOM?si=IhvaonG1I_PgEvuM',
+    component: Gerridae
   },
   //============================
   [GameIds.STELLATA]: {
@@ -144,7 +154,8 @@ export const Games = {
     image: true,
     playable: true,
     article: true,
-    video: false,
+    video: true,
+    embed: 'https://www.youtube.com/embed/tWOmR3LsuU4?si=V796O_XIp_rdRIRn',
     component: StellataWaterway
   },
   [GameIds.AUTUMN_DAY]: {
@@ -164,7 +175,7 @@ export const Games = {
     date: '2022',
     brief:
       'An interactive rendering of an article about a sea snail by Dr. Rebecca Helm, professor of marine biology at Georgetown University.',
-    image: false,
+    image: true,
     playable: true,
     article: true,
     video: false,
@@ -178,7 +189,8 @@ export const Games = {
     image: true,
     playable: true,
     article: true,
-    video: false,
+    video: true,
+    embed: 'https://www.youtube.com/embed/DAWz8SXKhSo?si=UXBF1b1p2cu1LPpk',
     component: Stones
   },
   [GameIds.GRID_GARDEN]: {
@@ -189,7 +201,8 @@ export const Games = {
     image: true,
     playable: true,
     article: true,
-    video: false,
+    video: true,
+    embed: 'https://www.youtube.com/embed/ts6D_aYnd8g?si=90wEl3cEKesmBPXt',
     component: GridGarden
   },
   [GameIds.GOODBYE_MONSTER]: {
@@ -200,8 +213,9 @@ export const Games = {
       'An text-based adventure and pet game for the web that challenges the instrumentality of monsters in games.',
     image: true,
     playable: true,
-    article: false,
+    article: true,
     video: true,
+    embed: 'https://www.youtube.com/embed/1tXSoDF18CA?si=Dpym31bXyPLfcL12',
     link: 'https://goodbye.monster',
     component: GoodbyeMonster
   }

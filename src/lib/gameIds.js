@@ -1,10 +1,8 @@
 // Must match the itch url (if the game info will be fetched from itch)
 export const GameIds = {
-  // 2023
   GOODBYE_MONSTER: 'goodbyemonster',
   HORIZON: 'horizon',
   SLIME_FOREST: 'slime-forest',
-  // 2022
   GRID_GARDEN: 'grid-garden',
   CLOVER_PATCH: 'clover-patch',
   VALLEY: 'from-the-well-in-the-valley',
@@ -16,9 +14,31 @@ export const GameIds = {
   KLAVIERING: 'klaviering',
   GERRIDAE: 'gerridae',
   STONES: 'stones',
-  // 2021
   URSONATE: 'ursonatelargo',
   GOLF: 'gol-f',
-  // 2020
   INTERFERENCE: 'interference'
 };
+
+export const PostedIds = [
+  // 2023
+  GameIds.GOODBYE_MONSTER,
+  GameIds.HORIZON,
+  GameIds.SLIME_FOREST,
+  // 2022
+  GameIds.GRID_GARDEN,
+  //   GameIds.CLOVER_PATCH,
+  GameIds.VALLEY,
+  GameIds.STELLATA,
+  GameIds.AUTUMN_DAY,
+  GameIds.VIOLET_SNAIL,
+  //   GameIds.CHESS,
+  GameIds.SCAFFOLD,
+  GameIds.KLAVIERING,
+  GameIds.GERRIDAE,
+  GameIds.STONES,
+  // 2021
+  GameIds.URSONATE,
+  GameIds.GOLF,
+  // 2020
+  GameIds.INTERFERENCE
+];
