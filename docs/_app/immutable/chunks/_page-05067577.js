@@ -1,1 +1,0 @@
-import{H as r}from"./control-03134885.js";import{b as t,G as n}from"./localInfo-2aef197d.js";function u(e,o){return new r(e,o)}function l({params:e}){if(Object.values(t).includes(e.slug))return n[e.slug];throw u(404,"Not found")}const f=Object.freeze(Object.defineProperty({__proto__:null,load:l},Symbol.toStringTag,{value:"Module"}));export{f as _,l};
