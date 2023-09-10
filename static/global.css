@@ -12,21 +12,11 @@
 
 html {
   font-size: 62.5%;
-  overflow-y: scroll;
 }
 
 :focus-visible {
   outline: 4px solid chartreuse;
   border-radius: 2px;
-}
-
-.body {
-  height: fit-content;
-  font-size: 1.6rem;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  color: var(--text-primary);
-  background-image: url('./path.png'),
-    linear-gradient(-15deg, var(--backdrop), var(--background), var(--background), var(--backdrop));
 }
 
 div {

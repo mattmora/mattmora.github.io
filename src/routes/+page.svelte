@@ -18,7 +18,8 @@
     <hr />
     <p>
       I'm a game designer with a background in audio programming and music composition. I'm
-      interested in systems design, web games, experimental games, music games, and more.
+      interested in systems design, web games, experimental games, music games, creature collectors,
+      and more.
     </p>
     <p>
       You can play most of my games on my
@@ -41,7 +42,7 @@
       {#if data}
         <article class="row">
           {#if data.title}
-            <div class="brief" style="width: 100%;">
+            <div class="brief" style="width: 75%;">
               <Game game={data} brief />
             </div>
             {#if data.image && data.cover_image}
@@ -69,9 +70,10 @@
 <style>
   .games {
     position: relative;
-    display: grid;
-    column-gap: 1em;
-    row-gap: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     padding: 1em;
   }
 
