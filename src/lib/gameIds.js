@@ -26,7 +26,7 @@ export const PostedIds = [
   GameIds.SLIME_FOREST,
   // 2022
   GameIds.GRID_GARDEN,
-  //   GameIds.CLOVER_PATCH,
+  GameIds.CLOVER_PATCH,
   GameIds.VALLEY,
   GameIds.STELLATA,
   GameIds.AUTUMN_DAY,
