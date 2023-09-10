@@ -204,7 +204,7 @@ export const Games = {
   },
   [GameIds.GOODBYE_MONSTER]: {
     id: GameIds.GOODBYE_MONSTER,
-    role: 'Designer, Programmer, Audio',
+    role: 'Designer, Engineer, Audio',
     date: '2023',
     brief:
       'An text-based adventure and pet game for the web that challenges the instrumentality of monsters in games.',
