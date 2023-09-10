@@ -40,7 +40,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-image: url('./path.png'),
+    background-image: url('path.png'),
       linear-gradient(
         -15deg,
         var(--backdrop),
