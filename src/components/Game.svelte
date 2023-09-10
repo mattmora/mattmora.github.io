@@ -5,10 +5,12 @@
 
 <section>
   <h3>{game.title ?? '. . .'} <span class="info"> / {game.role + ' / ' + game.date}</span></h3>
-  {#if !brief && game.playable}
-    <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer"
-      >{game.link ?? game.url}</a
-    >
+  {#if !brief}
+    {#if game.playable}
+      <a href={game.link ?? game.url} target="_blank" rel="noopener noreferrer"
+        >{game.link ?? game.url}</a
+      >
+    {/if}
     <hr />
   {/if}
   {#if brief}
