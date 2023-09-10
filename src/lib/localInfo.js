@@ -83,8 +83,6 @@ export const Games = {
     article: false,
     video: false
   },
-  //============================
-  //============================
   [GameIds.INTERFERENCE]: {
     id: GameIds.INTERFERENCE,
     role: 'Solo project',
@@ -144,7 +142,6 @@ export const Games = {
     embed: 'https://www.youtube.com/embed/gvH6NGf_KOM?si=IhvaonG1I_PgEvuM',
     component: Gerridae
   },
-  //============================
   [GameIds.STELLATA]: {
     id: GameIds.STELLATA,
     role: 'Solo project',
@@ -199,7 +196,7 @@ export const Games = {
     date: '2022',
     brief: 'An incremental game for Excel.',
     image: true,
-    playable: true,
+    playable: false,
     article: true,
     video: true,
     embed: 'https://www.youtube.com/embed/ts6D_aYnd8g?si=90wEl3cEKesmBPXt',
