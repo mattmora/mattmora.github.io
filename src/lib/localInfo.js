@@ -122,7 +122,7 @@ export const Games = {
     id: GameIds.KLAVIERING,
     role: 'Solo project',
     date: '2022',
-    brief: 'A sound toy driven by Unity ML-Agents.',
+    brief: 'A pianistic moving sculpture garden.',
     image: true,
     playable: true,
     article: false,
