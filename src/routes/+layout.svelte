@@ -13,7 +13,7 @@
     <slot />
   </div>
   <footer>
-    <p>© 2023</p>
+    <p>© 2024</p>
     <p>
       <a href="https://github.com/mattmora/mattmora.github.io"
         >https://github.com/mattmora/mattmora.github.io</a

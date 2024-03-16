@@ -12,7 +12,7 @@
 
 <header>
   <div class="panel block">
-    <h1 id="name">Matt Mora</h1>
+    <h1 id="name">Matt Mora / Matt Wang</h1>
     <h3 id="roles">Game Designer, Programmer</h3>
     <!-- <a href="https://mattmora.itch.io" target="_blank" rel="noopener noreferrer">mattmora.itch.io</a> -->
     <hr />
