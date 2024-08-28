@@ -19,8 +19,11 @@
     at all, and while they do complicate it, they also suggest some interesting system dynamics if I
     feature two reference frames. Without going into too much detail here, much thought has gone
     into the hypothetical “relativistic rocket,” which while unrealistic with today's technology,
-    engages with real physics and can certainly work in a game. (This article by Philip Gibbs
-    summarizes most of the physics and science that inspired Horizon).
+    engages with real physics and can certainly work in a game. (<a
+      href="https://math.ucr.edu/home/baez/physics/Relativity/SR/Rocket/rocket.html"
+      target="_blank"
+      rel="noopener noreferrer">This article</a
+    > by Philip Gibbs summarizes most of the physics and science that inspired Horizon).
   </p>
   <h3>Implementation & Systems</h3>
   <p>

@@ -65,7 +65,7 @@ p.final {
   text-align: left;
   font: inherit;
   padding: 0;
-  border: 10px ridge var(--soft-link);
+  border: 6px ridge var(--soft-link);
   transform: scale(1);
   transform: transform 0.1s;
 }
@@ -74,11 +74,11 @@ p.final {
   margin-bottom: 1em;
   padding: 1.5em;
   background-color: var(--background);
-  border: 10px ridge var(--text-faded);
+  border: 2px groove var(--text-faded);
 }
 
 .panel:enabled {
-  border: 10px ridge var(--soft-link);
+  border: 6px ridge var(--soft-link);
 }
 
 .panel:enabled:hover {
